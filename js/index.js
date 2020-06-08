@@ -39,14 +39,6 @@ let playable = true;
 const correctLetters = [];
 const wrongLetters = [];
 
-//Score updating
-const scoreCounting = document.getElementById('score');
-let score = 0;
-function scoreUpdate() {
-    score++;
-    scoreCounting.innerHTML = score;
-}
-
 // Show hidden word
 function displayWord() {
 	wordEl.innerHTML = `
@@ -70,6 +62,13 @@ function displayWord() {
 
 		playable = false;
 	}
+}
+//Score updating
+const scoreCounting = document.getElementById('score');
+let score = 0;
+function scoreUpdate() {
+    score++;
+    scoreCounting.innerHTML = score;
 }
 
 // Update the wrong letters
